@@ -1,5 +1,6 @@
 "use client";
 import ContactHeader from "../components/Contact Components/ContactHeader";
+import Button from "../components/shared/Button";
 import Input from "../components/shared/Input";
 import TextArea from "../components/shared/TextArea";
 import NonErrorLayout from "../layouts/NonErrorLayout";
@@ -8,8 +9,8 @@ export default function Page() {
   return (
     <NonErrorLayout>
       <ContactHeader />
-      <div className="bg-background-color w-full xl:px-[12%] lg:px-[7%] px-[5%] flex flex-col items-center">
-        <div className="w-full md:h-[400px] sm:p-5 p-3 bg-white rounded-md flex flex-col gap-2">
+      <div className="bg-background-color w-full xl:px-[12%] lg:px-[7%] px-[5%] py-[80px] flex flex-col items-center">
+        <div className="w-full sm:p-5 p-3 bg-white rounded-md flex flex-col gap-2">
           <h4 className="text-xxs text-text-light">We’re here to help you!</h4>
           <h2 className="sm:text-rg text-md  text-brand-color font-semibold">
             Shikshya <span className="text-[#202020]">Support</span>
@@ -68,6 +69,7 @@ export default function Page() {
               onChange={() => {}}
             />
           </div>
+          <Button title="Send Message" className={"w-[200px] mx-auto my-4"}/>
         </div>
       </div>
     </NonErrorLayout>
