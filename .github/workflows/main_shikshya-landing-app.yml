@@ -42,7 +42,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-      API_URL: 'https://frontend.shikshya.me/public/api/v1'
+      API_URL: 'https://frontend.shikshya.me/public/api/v1'  # Added environment variable
     permissions:
       id-token: write #This is required for requesting the JWT
 
@@ -54,7 +54,7 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
+
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -69,4 +69,3 @@ jobs:
           app-name: 'shikshya-landing-app'
           slot-name: 'Production'
           package: .
-          
