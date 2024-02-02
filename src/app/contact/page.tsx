@@ -14,7 +14,7 @@ export default function Page() {
           <h2 className="sm:text-rg text-md  text-brand-color font-semibold">
             Shikshya <span className="text-[#202020]">Support</span>
           </h2>
-          <div className="md:grid md:flex-col grid grid-cols-2 gap-4">
+          <div className="md:grid flex flex-col grid-cols-2 gap-4">
             <Input
               label="Full Name"
               placeholder="Enter full name"
