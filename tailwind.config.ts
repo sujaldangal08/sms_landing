@@ -30,7 +30,6 @@ const config: Config = {
         "brand-blue": "#DEE4F4",
         "brand-blue-light": "#EFF3FD",
         "brand-dark-blue": "#24394D",
-        "background-light-color": "#858C95",
       },
       fontSize: {
         "4xs": "10px",
