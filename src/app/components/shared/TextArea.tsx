@@ -4,16 +4,18 @@ export default function TextArea({
   className,
   name,
   onChange,
+  isRequired,
 }: {
   label: string;
   placeholder: string;
   className?: string;
   name: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  isRequired?: boolean;
 }) {
   return (
     <div className={`flex flex-col gap-2 ` + className}>
-      <label className="text-xxs text-text-dark">{label}</label>
+      <label className={`text-xxs text-text-dark after:text-brand-color ${isRequired && "after:content-['*']"}`}>{label}</label>
       <textarea
         onChange={onChange}
         name={name}

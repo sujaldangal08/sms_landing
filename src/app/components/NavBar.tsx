@@ -6,7 +6,7 @@ import Button from "./shared/Button";
 import NAV_LINKS from "../../../constants/NavLinks";
 import DropDownIcon from "../../../public/icons/DropDownIcon";
 import MobileNavBar from "./shared/MobileNavBar";
-
+import Link from "next/link";
 
 export default function NavBar() {
   const [selectedNavItem, setNavItem] = useState<number | null>(null);
@@ -71,13 +71,15 @@ export default function NavBar() {
         style={{ backdropFilter: "blur(5px)" }}
         id="desktop_navbar"
       >
-        <Image
-          src={ShikshyaLogoDark}
-          alt="Shikshya Logo"
-          width={160}
-          height={160}
-          className="lg:w-[160px] w-[140px]"
-        />
+        <Link href={"/"}>
+          <Image
+            src={ShikshyaLogoDark}
+            alt="Shikshya Logo"
+            width={160}
+            height={160}
+            className="lg:w-[160px] w-[140px]"
+          />
+        </Link>
         <div className="flex flex-row lg:gap-12 gap-8 items-center">
           {NAV_LINKS.map((curr, index) => {
             if (curr.subTitle.length == 0) {
@@ -113,7 +115,7 @@ export default function NavBar() {
           />
         </div>
       </div>
-      <MobileNavBar selectedNavItem={selectedNavItem} setNavItem={setNavItem}/>  
+      <MobileNavBar selectedNavItem={selectedNavItem} setNavItem={setNavItem} />
     </>
   );
 }

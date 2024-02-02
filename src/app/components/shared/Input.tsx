@@ -9,6 +9,7 @@ export default function Input({
   type,
   name,
   onChange,
+  isRequired,
 }: {
   label: string;
   placeholder: string;
@@ -16,10 +17,17 @@ export default function Input({
   type: HTMLInputTypeAttribute;
   name: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isRequired?: boolean;
 }) {
   return (
     <div className={`flex flex-col gap-2 ` + className}>
-      <label className="text-xxs text-text-dark">{label}</label>
+      <label
+        className={`text-xxs text-text-dark after:text-brand-color ${
+          isRequired && "after:content-['*']"
+        }`}
+      >
+        {label}
+      </label>
       <input
         onChange={onChange}
         name={name}
