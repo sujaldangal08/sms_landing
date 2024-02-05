@@ -8,9 +8,9 @@ import {
   ProductGlimpseSection,
   ContactSection,
   TestimonialSection,
-} from "@/app/components/HomePage Components";
+} from "@/components/HomePage Components";
 
-import NonErrorLayout from "./layouts/NonErrorLayout";
+import NonErrorLayout from "@/layouts/NonErrorLayout";
 
 export default function Home() {
   return (
