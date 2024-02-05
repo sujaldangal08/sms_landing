@@ -89,12 +89,14 @@ export default function NavBar() {
           {NAV_LINKS.map((curr, index) => {
             if (curr.subTitle.length == 0) {
               return (
-                <h3
-                  key={index}
-                  className="lg:text-xxs text-xxxs font-medium cursor-pointer"
-                >
-                  {curr.title}
-                </h3>
+                <Link href={"/features"}>
+                  <h3
+                    key={index}
+                    className="lg:text-xxs text-xxxs font-medium cursor-pointer"
+                  >
+                    {curr.title}
+                  </h3>
+                </Link>
               );
             } else {
               return (

@@ -17,6 +17,7 @@ const NAV_LINKS = [
   {
     title: "Features",
     subTitle: [],
+    link: "/features",
   },
   {
     title: "Add-Ons",
