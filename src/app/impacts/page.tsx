@@ -5,6 +5,8 @@ import Shikshya_Card_Overlay from "../../../public/overlays/Shikshya_Card_Overla
 import ContactFeature from "@/components/Contact Components/ContactFeature";
 import FakeSchoolLogos from "../../../public/schools_fake_logo.svg";
 import ShikshyaLogoDark from "../../../public/shikshya_logo_dark.svg";
+import GraphImage from "../../../public/mockups/graph_mockups.png";
+import SettingIcon from "../../../public/icons/SettingIcon";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -131,6 +133,40 @@ export default function Page() {
               in the potential of youth, we're investing in a brighter future
               for society.
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col md:gap-4 gap-2 md:py-12 py-8 items-center xl:px-[12%] lg:px-[7%] px-[5%] bg-background-color">
+        <p className="text-brand-color text-xxs">The Shikshya Advantage</p>
+        <h2 className="text-text-dark text-lg font-semibold">
+          Key Achievements
+        </h2>
+        <p className="sm:text-xs text-xxs text-center text-text-light lg:w-[70%] sm:w-[80%] w-[90%]">
+          At Shikshya, we are on a mission to make a positive and lasting impact
+          on society. Our core values are the compass that guides our journey
+          toward a better world.
+        </p>
+        <div className="flex w-full mt-5 rg:flex-row flex-col gap-6 items-center justify-between">
+          <Image
+            src={GraphImage}
+            alt="Graph Image"
+            width={2000}
+            className="rg:w-[50%] md:w-[80%] sm:w-[90%]"
+          />
+          <div className="rg:flex grid rg:flex-col sm:grid-cols-2 grid-cols-1 rg:w-[40%] w-full md:gap-10 gap-5">
+            {Array.from([, , , ,]).map((_, indx) => (
+              <div className="flex flex-row md:gap-4 gap-2 items-center" key={indx}>
+                <div className="bg-brand-color-medium p-[10px] rounded-full">
+                  <SettingIcon color="#ffffff" width="30" height="30" />
+                </div>
+                <div>
+                  <h2 className="font-medium rg:text-sm text-xs pb-1">
+                    Getting Started with Shikshya
+                  </h2>
+                  <p className="rg:text-xs text-xxs text-text-light">At Shikshya</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
