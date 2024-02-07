@@ -69,3 +69,7 @@ input::-webkit-inner-spin-button {
 .animated-icon {
   transition: transform 0.3s ease-in-out;
 }
+
+.dropdown{
+  transition: opacity 0.3s ease-in-out;
+}

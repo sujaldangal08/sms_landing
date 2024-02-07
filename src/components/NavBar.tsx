@@ -7,9 +7,11 @@ import NAV_LINKS from "@/constants/NavLinks";
 import DropDownIcon from "../../public/icons/DropDownIcon";
 import MobileNavBar from "./shared/MobileNavBar";
 import Link from "next/link";
+import NavAIIcon from "../../public/icons/NavAIIcon";
 
 export default function NavBar() {
   const [selectedNavItem, setNavItem] = useState<number | null>(null);
+  const [openNav, setOpenNav] = useState<boolean>(false);
 
   const updateNavClasses = useCallback(
     ({
@@ -38,7 +40,7 @@ export default function NavBar() {
 
       if (nav != null) {
         const offset = window.pageYOffset;
-
+        setOpenNav(false);
         if (offset < 100) {
           updateNavClasses({
             nav: nav,
@@ -64,10 +66,19 @@ export default function NavBar() {
     };
   }, [updateNavClasses]);
 
-  useEffect(() => {
-    if (selectedNavItem == 0) {
+  const handleMouseLeave = () => {
+    if (!openNav) {
+      setTimeout(() => {
+        setNavItem(null);
+      }, 500);
     }
-  }, [selectedNavItem]);
+  };
+
+  useEffect(() => {
+    if (!openNav) {
+      setNavItem(null);
+    }
+  }, [openNav]);
 
   return (
     <>
@@ -75,6 +86,8 @@ export default function NavBar() {
         className="flex-row w-full xl:px-[12%] lg:px-[7%] px-[5%] py-8 justify-between items-center fixed top-0 z-[10] rg:flex hidden"
         style={{ backdropFilter: "blur(5px)" }}
         id="desktop_navbar"
+        onMouseEnter={() => setOpenNav(true)}
+        onMouseLeave={() => setOpenNav(false)}
       >
         <Link href={"/"}>
           <Image
@@ -85,38 +98,99 @@ export default function NavBar() {
             className="lg:w-[160px] w-[140px]"
           />
         </Link>
-        <div className="flex flex-row lg:gap-12 gap-8 items-center relative">
+        <div className="flex flex-row lg:gap-12 gap-8 items-center">
           {NAV_LINKS.map((curr, index) => {
-            if (curr.subTitle.length == 0) {
+            if (curr.subTitle.length === 0) {
               return (
-                <Link href={"/features"}>
-                  <h3
-                    key={index}
-                    className="lg:text-xxs text-xxxs font-medium cursor-pointer"
-                  >
+                <Link
+                  key={index}
+                  href={"/features"}
+                  onMouseEnter={() => {
+                    setNavItem(null);
+                  }}
+                  onMouseLeave={() => {
+                    handleMouseLeave();
+                  }}
+                >
+                  <h3 className="lg:text-xxs text-xxxs font-medium cursor-pointer">
                     {curr.title}
                   </h3>
                 </Link>
               );
             } else {
               return (
-                <Link href={curr.subTitle[0].link}>
+                <div
+                  key={index}
+                  className="relative inline-block cursor-pointer"
+                >
                   <div
-                    key={index}
-                    className="flex flex-row items-center gap-1"
-                    onClick={() => {
+                    onMouseEnter={() => {
                       setNavItem(index);
                     }}
+                    onMouseLeave={() => {
+                      handleMouseLeave();
+                    }}
+                    className="flex flex-row items-center gap-1"
+                    onClick={() =>
+                      setNavItem(selectedNavItem === index ? null : index)
+                    }
                   >
-                    <h3 className="lg:text-xxs text-xxxs font-medium cursor-pointer">
+                    <h3 className="lg:text-xxs text-xxxs font-medium">
                       {curr.title}
                     </h3>
-                    <DropDownIcon width="14" height="15" />
+                    <DropDownIcon
+                      width="14"
+                      height="15"
+                      className={`${
+                        index === selectedNavItem ? "rotate-180" : "rotate-0"
+                      } animated-icon`}
+                    />
                   </div>
-                </Link>
+                  <div
+                    className={`${
+                      curr.subTitle.length > 3
+                        ? "grid grid-cols-2 gap-0 w-[500px] translate-x-[-25%]"
+                        : " translate-x-[0%]"
+                    } dropdown absolute left-[-100%] ${
+                      curr.subTitle.length == 2
+                        ? "bottom-[-160px]"
+                        : "bottom-[-225px]"
+                    }  bg-white rounded-xl py-2 px-5 shadow ${
+                      index === selectedNavItem
+                        ? "opacity-100"
+                        : "opacity-0 invisible"
+                    }`}
+                    onMouseEnter={() => {
+                      setNavItem(index);
+                    }}
+                    onMouseLeave={() => {
+                      handleMouseLeave();
+                    }}
+                  >
+                    {curr.subTitle.map((subtitle, indx) => (
+                      <Link href={subtitle.link}>
+                        <div
+                          key={indx}
+                          className="flex flex-row gap-4 items-center py-3"
+                        >
+                          <NavAIIcon height="25px" width="25px" />
+                          <div className="flex flex-col w-[200px]">
+                            <h4 className="font-medium text-[14px]">
+                              {subtitle.title}
+                            </h4>
+                            <p className="text-xxs text-text-light">
+                              {subtitle.description}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               );
             }
           })}
+
           <Button
             title="Request Demo"
             className="lg:text-xxs text-xxxs lg:px-6 px-4 lg:py-2 py-1"

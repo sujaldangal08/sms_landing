@@ -9,7 +9,7 @@ const NAV_LINKS = [
       },
       {
         title: "Social Impacts",
-        link: "/company",
+        link: "/impacts",
         description: "AI Virtual Teacher",
       },
     ],
@@ -22,6 +22,21 @@ const NAV_LINKS = [
   {
     title: "Add-Ons",
     subTitle: [
+      {
+        title: "Help Center",
+        link: "/help",
+        description: "AI Virtual Teacher",
+      },
+      {
+        title: "Contact Us",
+        link: "/contact",
+        description: "AI Virtual Teacher",
+      },
+      {
+        title: "Blog",
+        link: "/blog",
+        description: "AI Virtual Teacher",
+      },
       {
         title: "Help Center",
         link: "/contact",
@@ -44,7 +59,7 @@ const NAV_LINKS = [
     subTitle: [
       {
         title: "Help Center",
-        link: "/contact",
+        link: "/help",
         description: "AI Virtual Teacher",
       },
       {
@@ -54,7 +69,7 @@ const NAV_LINKS = [
       },
       {
         title: "Blog",
-        link: "/contact",
+        link: "/blog",
         description: "AI Virtual Teacher",
       },
     ],
