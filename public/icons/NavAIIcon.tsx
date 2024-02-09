@@ -29,8 +29,8 @@ export default function NavAIIcon({
           y2="23.3332"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#93C7F4" />
-          <stop offset="1" stop-color="#FFB5BA" />
+          <stop stopColor="#93C7F4" />
+          <stop offset="1" stopColor="#FFB5BA" />
         </linearGradient>
       </defs>
     </svg>

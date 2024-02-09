@@ -23,32 +23,32 @@ const NAV_LINKS = [
     title: "Add-Ons",
     subTitle: [
       {
-        title: "Help Center",
+        title: "AI Virtual Teacher",
         link: "/help",
         description: "AI Virtual Teacher",
       },
       {
-        title: "Contact Us",
+        title: "Inventory Management ",
         link: "/contact",
         description: "AI Virtual Teacher",
       },
       {
-        title: "Blog",
+        title: "Account and Payroll", 
         link: "/blog",
         description: "AI Virtual Teacher",
       },
       {
-        title: "Help Center",
+        title: "Assessment Management ",
+        link: "/assessment management",
+        description: "AI Virtual Teacher",
+      },
+      {
+        title: "Account and Payroll",
         link: "/contact",
         description: "AI Virtual Teacher",
       },
       {
-        title: "Contact Us",
-        link: "/contact",
-        description: "AI Virtual Teacher",
-      },
-      {
-        title: "Blog",
+        title: "AI Virtual Teacher",
         link: "/contact",
         description: "AI Virtual Teacher",
       },

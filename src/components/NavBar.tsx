@@ -99,11 +99,11 @@ export default function NavBar() {
           />
         </Link>
         <div className="flex flex-row lg:gap-12 gap-8 items-center">
-          {NAV_LINKS.map((curr, index) => {
+          {NAV_LINKS.map((curr,index) => {
             if (curr.subTitle.length === 0) {
               return (
                 <Link
-                  key={index}
+                  key={curr.title}
                   href={"/features"}
                   onMouseEnter={() => {
                     setNavItem(null);
@@ -120,7 +120,7 @@ export default function NavBar() {
             } else {
               return (
                 <div
-                  key={index}
+                  key={curr.title}
                   className="relative inline-block cursor-pointer"
                 >
                   <div
@@ -170,7 +170,7 @@ export default function NavBar() {
                     {curr.subTitle.map((subtitle, indx) => (
                       <Link href={subtitle.link}>
                         <div
-                          key={indx}
+                          key={"Sub " + indx}
                           className="flex flex-row gap-4 items-center py-3"
                         >
                           <NavAIIcon height="25px" width="25px" />
