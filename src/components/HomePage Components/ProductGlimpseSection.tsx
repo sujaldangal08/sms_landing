@@ -38,23 +38,23 @@ export default function ProductGlimpseSection() {
 
   return (
     <div className="flex flex-col items-center gap-3 bg-background-color pt-10 w-full relative">
-      <h4 className="text-brand-color text-xs">Product Insight</h4>
-      <h2 className="text-text-dark text-lg font-semibold">
+      <h4 className="text-brand-color sm:text-xs text-xxs">Product Insight</h4>
+      <h2 className="text-text-dark md:text-lg text-rg font-semibold">
         A Glimpse of What’s Inside
       </h2>
-      <p className="text-xs text-text-light w-[45%] text-center">
-        Empower your entire educational community with dedicated applications
-        for students, teachers, and parents. Streamline communication, enhance
-        learning, and stay connected effortlessly
+      <p className="md:text-xs sm:text-xxs text-xxxs text-text-light lg:w-[60%] rg:w-[70%] sm:w-[80%] w-[90%] text-center">
+        Step into a world where innovation meets functionality. Witness the
+        power of our solutions as they redefine the way you work, learn, and
+        thrive.
       </p>
       <Image
         src={DownArrow}
         width={200}
         height={200}
         alt="Down Arrow Element"
-        className="w-[40px] absolute right-[22%] top-[20%]"
+        className="w-[40px] absolute xg:right-[24%] right-[18%] lg:block hidden top-[20%]"
       />
-      <div className="w-full h-[330px] relative mt-[15%] bg-brand-dark-blue flex flex-row items-start justify-start">
+      <div className="w-full xl:h-[330px] lg:h-[290px] rg:h-[250px] md:h-[220px] sm:h-[160px] h-[110px] relative xl:mt-[15%] lg:mt-[17%] rg:mt-[20%] md:mt-[25%] sm:mt-[30%] mt-[40%] bg-brand-dark-blue flex flex-row items-start justify-start">
         {[0, 1, 2, 3, 4].map((index) => (
           <Image
             key={index}
@@ -64,14 +64,14 @@ export default function ProductGlimpseSection() {
             alt={`Mockup ${index}`}
             className={`absolute filter cursor-pointer pointer-events-auto active-image ${
               calculatePosition(index) === 2
-                ? "left-[50%] transform -translate-x-1/2 z-[2] w-[18%] contrast-[1] bottom-[-10%]"
+                ? "left-[50%] transform -translate-x-1/2 z-[2] xl:w-[18%] lg:w-[20%] rg:w-[22%] md:w-[25%] sm:w-[30%] w-[35%] contrast-[1] bottom-[-10%]"
                 : calculatePosition(index) === 3
-                ? "right-[28%] z-[1] w-[15%] contrast-[0.9] bottom-[-5%]"
+                ? "xl:right-[30%] lg:right-[28%] rg:right-[26%] md:right-[24%] sm:right-[22%] right-[20%] z-[1] xl:w-[15%] lg:w-[17%] rg:w-[19%] md:w-[21%] sm:w-[23%] w-[25%] contrast-[0.9] bottom-[-5%]"
                 : calculatePosition(index) === 1
-                ? "left-[28%] z-[1] w-[15%] contrast-[0.9] bottom-[-5%]"
+                ? "xl:left-[30%] lg:left-[28%] rg:left-[26%] md:left-[24%] sm:left-[22%] left-[20%] z-[1] xl:w-[15%] lg:w-[17%] rg:w-[19%] md:w-[21%] sm:w-[23%] w-[25%] contrast-[0.9] bottom-[-5%]"
                 : calculatePosition(index) === 0
-                ? "left-[20%] z-[0] w-[13%] contrast-[0.8] bottom-[0%]"
-                : "right-[20%] z-[0] w-[13%] contrast-[0.8] bottom-[0%]"
+                ? "xl:left-[20%] lg:left-[18%] rg:left-[16%] md:left-[14%] sm:left-[12%] left-[10%] z-[0] xl:w-[13%] lg:w-[14%] rg:w-[15%] md:w-[16%] sm:w-[17%] w-[18%] contrast-[0.8] bottom-[0%]"
+                : "xl:right-[20%] lg:right-[18%] rg:right-[16%] md:right-[14%] sm:right-[12%] right-[10%] z-[0] xl:w-[13%] lg:w-[14%] rg:w-[15%] md:w-[16%] sm:w-[17%] w-[18%] contrast-[0.8] bottom-[0%]"
             }`}
             onClick={() => {
               changeImage(index);

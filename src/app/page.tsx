@@ -19,8 +19,8 @@ export default function Home() {
       <RatingSection />
       <KeyFeaturesSection />
       <MultiApplicationSection />
-      <ProductInsightSection />
-      <TestimonialSection />
+      {/* <ProductInsightSection /> */}
+      {/* <TestimonialSection /> */}
       <ProductGlimpseSection />
       <ClientSection />
       <ContactSection />

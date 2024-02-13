@@ -28,8 +28,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col bg-white gap-5 w-[70%] px-7 py-[30px] mt-6 outline outline-1 outline-neutral-200 rounded-md">
-      <div className="flex flex-row w-full gap-10 justify-between">
+    <div className="flex flex-col bg-white gap-5 lg:w-[70%] rg:w-[80%]  w-[90%] px-7 py-[30px] mt-6 outline outline-1 outline-neutral-200 rounded-md">
+      <div className="flex md:flex-row flex-col w-full md:gap-10 gap-5 justify-between">
         <Input
           label="Name"
           placeholder="Your Name"
@@ -47,7 +47,7 @@ export default function ContactForm() {
           onChange={onChange}
         />
       </div>
-      <div className="flex flex-row w-full gap-10 justify-between">
+      <div className="flex md:flex-row flex-col w-full md:gap-10 gap-5 justify-between">
         <Input
           label="Phone Number"
           placeholder="+000"
@@ -73,7 +73,7 @@ export default function ContactForm() {
       />
       <Button
         title="Send your message"
-        className={"w-[200px] ml-[100%] translate-x-[-100%] py-[10px]"}
+        className={"w-[200px] md:ml-[100%] ml-[50%] md:translate-x-[-100%] translate-x-[-50%] py-[10px]"}
         onClick={sendMessage}
       />
     </div>

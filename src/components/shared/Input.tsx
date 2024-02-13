@@ -20,7 +20,7 @@ export default function Input({
   isRequired?: boolean;
 }) {
   return (
-    <div className={`flex flex-col sm:gap-2 gap-[6px]` + className}>
+    <div className={`flex flex-col sm:gap-2 gap-[6px] ` + className}>
       <label
         className={`md:text-xxs  text-xxxs text-text-dark after:text-brand-color ${
           isRequired && "after:content-['*']"

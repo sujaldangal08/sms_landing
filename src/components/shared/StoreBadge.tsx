@@ -28,6 +28,7 @@ export default function PlayStoreBadge({
           height={width ? width : 100}
           alt="PlayStore Logo"
           className={innerClassName}
+          
         />
       </div>
     );
@@ -35,16 +36,16 @@ export default function PlayStoreBadge({
     return (
       <div
         className={
-          `bg-black px-7 py-[9px] outline outline-1 outline-neutral-200 rounded-md ` +
+          `bg-black rg:px-14 px-2 py-[9px] outline outline-1 outline-neutral-200 rounded-md ` +
           className
         }
       >
         <Image
           src={src}
-          width={width ? width : 100}
-          height={width ? width : 100}
+          width={500}
+          height={500}
           alt="PlayStore Logo"
-          className={`w-[${width ? width : "90"}px]`}
+          className={`rg:w-[120px] md:w-[100px] sm:w-[80px] w-[60px]`}
         />
       </div>
     );

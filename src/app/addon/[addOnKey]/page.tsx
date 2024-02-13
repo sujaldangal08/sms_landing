@@ -16,7 +16,7 @@ export default function Page() {
           alt="Pixel Mockup"
           className="w-[35%] rg:block hidden"
         />
-        <div className="flex flex-col gap-5 items-start justify-start w-full">
+        <div className="flex flex-col gap-5 items-start justify-start w-[50%]">
           <p className="text-brand-color font-regular rg:text-xs sm:text-xxs text-xxxs">
             The Shikshya Advantage
           </p>

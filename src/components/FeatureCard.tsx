@@ -12,17 +12,18 @@ export default function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="flex flex-col outline outline-1 outline-neutral-100 rounded-md overflow-clip group flex-grow w-[270px]">
-      <div className="flex flex-col items-center bg-white p-5 justify-between gap-3 relative">
+    <div className= "flex flex-col outline outline-1 outline-neutral-100 rounded-md overflow-clip group rg:max-w-[260px] md:max-w-[250px] w-full">
+      <div className="flex flex-col items-center bg-white p-5 gap-3 relative h-full">
         <Shikshya_Card_Overlay
-          className="absolute right-0 top-0 z-[0]"
+          className="absolute right-[-5px] top-0 z-[0]"
           color={color}
+          width="70px"
         />
         <div className={`p-3 rounded-full`} style={{ backgroundColor: color }}>
           {Icon}
         </div>
-        <h2 className="text-sm font-medium text-text-dark z-[1]">{title}</h2>
-        <p className="text-xs font-regular text-text-light z-[1]">
+        <h2 className="md:text-sm text-xs font-medium text-text-dark z-[1]">{title}</h2>
+        <p className="md:text-xs text-xxs font-regular text-text-light z-[1]">
           {description}
         </p>
       </div>
