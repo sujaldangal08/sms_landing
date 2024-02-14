@@ -4,8 +4,7 @@ import Image from "next/image";
 import PixelTrueMockUp from "../../../../public/pixel_true_mockup.png";
 import Button from "@/components/shared/Button";
 import AddonMockup from "../../../../public/addon_mockup.svg";
-import FeatureCard from "@/components/FeatureCard";
-import SettingIcon from "../../../../public/icons/SettingIcon";
+import ScribbleArrow from "../../../../public/elements/Scribble_Arrow.svg";
 import MultiApplicationFeatureCard from "@/components/MultiApplicationFeatureCard";
 
 export default function Page() {
@@ -39,7 +38,7 @@ export default function Page() {
         </div>
       </div>
       <div className="w-full flex flex-col items-center rg:py-14 py-6 xl:px-[12%] lg:px-[7%] px-[5%]">
-        <div className="flex flex-col items-start w-[100%] gap-3">
+        <div className="flex flex-col items-start w-[100%] gap-3  xl:pb-10 lg:pb-9 rg:pb-8 md:pb-7 sm:pb-6 pb-5">
           <p className="text-brand-color font-regular rg:text-xs sm:text-xxs text-xxxs">
             The Shikshya Advantage
           </p>
@@ -48,14 +47,21 @@ export default function Page() {
             Educational Solutions
           </h3>
         </div>
-        <div className="flex flex-row w-full">
-          <div className="flex flex-col">
+        <div className="rg:flex hidden flex-row rg:gap-0 gap-4 w-full items-stretch relative">
+          <div className="flex flex-col justify-end gap-[20%]">
             <MultiApplicationFeatureCard
-              className="w-[]"
+              className="w-[100%]"
               bgColor="#DEE4F4"
               color="#4A4973"
               title="Interactive Learning"
               description="AI adapts to each student's learning style, pace, and preferences, offering a truly personalized educational experience."
+            />
+            <MultiApplicationFeatureCard
+              className="w-[100%] mb-20"
+              bgColor="#F4F1E2"
+              color="#EAD795"
+              title="Progress Tracking"
+              description="AI algorithms track student progress and adjust teaching strategies accordingly."
             />
           </div>
           <Image
@@ -63,7 +69,54 @@ export default function Page() {
             alt="Addon Mockup"
             width={700}
             height={700}
-            className="w-[40%]"
+            className="w-[43%] rg:block hidden"
+          />
+          <Image src={ScribbleArrow} alt="Scribble Arrow" className="xl:block hidden w-[6vw] absolute right-[23%] bottom-[7vw]"/>
+          <div className="flex flex-col justify-start gap-[20%]">
+            <MultiApplicationFeatureCard
+              className="w-[100%]"
+              bgColor="#F2E9E4"
+              color="#C39D9A"
+              title="Real-Time Feedback"
+              description="Instant, AI-driven feedback on assignments and quizzes, helping students understand concepts more quickly."
+            />
+            <MultiApplicationFeatureCard
+              className="w-[100%]"
+              bgColor="#F3E8F9"
+              color="#B48AC9"
+              title="Engagement Tools"
+              description="Interactive exercises and gamified learning modules to keep students engaged and motivated."
+            />
+          </div>
+        </div>
+        <div className="rg:hidden grid sm:grid-cols-2 grid-cols-1 gap-5">
+          <MultiApplicationFeatureCard
+            className="w-[100%]"
+            bgColor="#DEE4F4"
+            color="#4A4973"
+            title="Interactive Learning"
+            description="AI adapts to each student's learning style, pace, and preferences, offering a truly personalized educational experience."
+          />
+          <MultiApplicationFeatureCard
+            className="w-[100%]"
+            bgColor="#F4F1E2"
+            color="#EAD795"
+            title="Progress Tracking"
+            description="AI algorithms track student progress and adjust teaching strategies accordingly."
+          />
+          <MultiApplicationFeatureCard
+            className="w-[100%]"
+            bgColor="#F2E9E4"
+            color="#C39D9A"
+            title="Real-Time Feedback"
+            description="Instant, AI-driven feedback on assignments and quizzes, helping students understand concepts more quickly."
+          />
+          <MultiApplicationFeatureCard
+            className="w-[100%]"
+            bgColor="#F3E8F9"
+            color="#B48AC9"
+            title="Engagement Tools"
+            description="Interactive exercises and gamified learning modules to keep students engaged and motivated."
           />
         </div>
       </div>
