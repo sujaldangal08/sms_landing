@@ -77,41 +77,6 @@ export default function MultiApplicationTab() {
       ],
     },
     {
-      image: TeacherMobile,
-      featureData: [
-        {
-          title: "Convenient Payments",
-          description:
-            "Simplify learning payments with Shikshya's easy methods. Handle fees effortlessly for uninterrupted access to educational resources.",
-        },
-        {
-          title: "Attendance Alerts",
-          description:
-            "Stay in the loop with Shikshya's Attendance Alerts. Receive timely updates on your child's class participation and overall engagement.",
-        },
-        {
-          title: "Assignments Overview",
-          description:
-            "Stay involved with Shikshya's Assignment Overview. Access a clear view of upcoming assignments, due dates, and your child's progress.",
-        },
-        {
-          title: "Schedule Monitoring",
-          description:
-            "Support your child's time management with Shikshya's Schedule Monitoring. Stay informed about their daily routine for a balanced schedule.",
-        },
-        {
-          title: "Class Tracking",
-          description:
-            "Stay engaged in your child's education with Shikshya's Class Tracking. Access information on ongoing and upcoming classes, enhancing communication between home and school.",
-        },
-        {
-          title: "Progress Reports",
-          description:
-            "Stay informed about your child's progress with Shikshya's Progress Reports. Get insights into achievements and areas for improvement, fostering collaboration between parents and teachers.",
-        },
-      ],
-    },
-    {
       image: ParentMobile,
       featureData: [
         {
@@ -143,6 +108,41 @@ export default function MultiApplicationTab() {
           title: "Insights and Reports",
           description:
             "Gain valuable insights into student performance with Shikshya's Insights and Reports. Access easy-to-understand analytics for informed decision-making and effective communication with parents.",
+        },
+      ],
+    },
+    {
+      image: TeacherMobile,
+      featureData: [
+        {
+          title: "Convenient Payments",
+          description:
+            "Simplify learning payments with Shikshya's easy methods. Handle fees effortlessly for uninterrupted access to educational resources.",
+        },
+        {
+          title: "Attendance Alerts",
+          description:
+            "Stay in the loop with Shikshya's Attendance Alerts. Receive timely updates on your child's class participation and overall engagement.",
+        },
+        {
+          title: "Assignments Overview",
+          description:
+            "Stay involved with Shikshya's Assignment Overview. Access a clear view of upcoming assignments, due dates, and your child's progress.",
+        },
+        {
+          title: "Schedule Monitoring",
+          description:
+            "Support your child's time management with Shikshya's Schedule Monitoring. Stay informed about their daily routine for a balanced schedule.",
+        },
+        {
+          title: "Class Tracking",
+          description:
+            "Stay engaged in your child's education with Shikshya's Class Tracking. Access information on ongoing and upcoming classes, enhancing communication between home and school.",
+        },
+        {
+          title: "Progress Reports",
+          description:
+            "Stay informed about your child's progress with Shikshya's Progress Reports. Get insights into achievements and areas for improvement, fostering collaboration between parents and teachers.",
         },
       ],
     },

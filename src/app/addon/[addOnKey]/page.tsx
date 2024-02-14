@@ -3,6 +3,10 @@ import AddOnHeader from "../components/AddOnHeader";
 import Image from "next/image";
 import PixelTrueMockUp from "../../../../public/pixel_true_mockup.png";
 import Button from "@/components/shared/Button";
+import AddonMockup from "../../../../public/addon_mockup.svg";
+import FeatureCard from "@/components/FeatureCard";
+import SettingIcon from "../../../../public/icons/SettingIcon";
+import MultiApplicationFeatureCard from "@/components/MultiApplicationFeatureCard";
 
 export default function Page() {
   return (
@@ -16,7 +20,7 @@ export default function Page() {
           alt="Pixel Mockup"
           className="w-[35%] rg:block hidden"
         />
-        <div className="flex flex-col gap-5 items-start justify-start w-[50%]">
+        <div className="flex flex-col gap-5 items-start justify-start rg:w-[50%] w-full">
           <p className="text-brand-color font-regular rg:text-xs sm:text-xxs text-xxxs">
             The Shikshya Advantage
           </p>
@@ -32,6 +36,35 @@ export default function Page() {
             converge to create a unique platform that benefits students,
             teachers, and parents alike.
           </p>
+        </div>
+      </div>
+      <div className="w-full flex flex-col items-center rg:py-14 py-6 xl:px-[12%] lg:px-[7%] px-[5%]">
+        <div className="flex flex-col items-start w-[100%] gap-3">
+          <p className="text-brand-color font-regular rg:text-xs sm:text-xxs text-xxxs">
+            The Shikshya Advantage
+          </p>
+          <h3 className="text-text-dark font-semibold rg:text-[32px] md:text-rg sm:text-md text-sm leading-[130%]">
+            Discover Shikshya: Redefining <br />
+            Educational Solutions
+          </h3>
+        </div>
+        <div className="flex flex-row w-full">
+          <div className="flex flex-col">
+            <MultiApplicationFeatureCard
+              className="w-[]"
+              bgColor="#DEE4F4"
+              color="#4A4973"
+              title="Interactive Learning"
+              description="AI adapts to each student's learning style, pace, and preferences, offering a truly personalized educational experience."
+            />
+          </div>
+          <Image
+            src={AddonMockup}
+            alt="Addon Mockup"
+            width={700}
+            height={700}
+            className="w-[40%]"
+          />
         </div>
       </div>
       <div className="w-full bg-white flex flex-col gap-14 items-start xl:px-[12%] lg:px-[7%] px-[5%] rg:py-14 py-6">

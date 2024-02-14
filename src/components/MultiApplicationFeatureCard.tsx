@@ -5,14 +5,18 @@ export default function MultiApplicationFeatureCard({
   title,
   description,
   color,
+  className,
 }: {
   bgColor: string;
   title: string;
   color?: string;
   description: string;
+  className?: string;
 }) {
   return (
-    <div className="flex flex-row items-start xl:gap-5 rg:gap-4 sm:gap-3 gap-2">
+    <div
+      className={`flex flex-row items-start xl:gap-5 rg:gap-4 sm:gap-3 gap-2 ${className}`}
+    >
       <div className="p-2 rounded-full" style={{ backgroundColor: bgColor }}>
         <SettingIcon
           color={color}
