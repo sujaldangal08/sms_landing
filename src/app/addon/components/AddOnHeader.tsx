@@ -3,7 +3,7 @@ import ProgressOverview from "../../../../public/progress_overview.svg";
 
 export default function AddOnHeader() {
   return (
-    <div className="w-full h-full bg-header-gradient  flex flex-row  items-center justify-between rg:pt-[150px] sm:py-[60px] py-6 rg:pb-12 xl:px-[12%] lg:px-[7%] px-[5%] xs:mt-14">
+    <div className="w-full h-full bg-header-gradient  flex flex-row  items-center justify-between rg:pt-[150px] sm:py-[60px] py-6 rg:pb-12 xl:px-[12%] lg:px-[7%] px-[5%] rg:mt-0 mt-14">
       <div className="flex flex-col gap-5 items-start justify-start w-full">
         <p className="text-brand-color font-regular rg:text-xs sm:text-xxs text-xxxs">
           Features of Shikshya
