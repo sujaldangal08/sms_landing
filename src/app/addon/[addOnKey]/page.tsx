@@ -6,6 +6,7 @@ import Button from "@/components/shared/Button";
 import AddonMockup from "../../../../public/addon_mockup.svg";
 import ScribbleArrow from "../../../../public/elements/Scribble_Arrow.svg";
 import MultiApplicationFeatureCard from "@/components/MultiApplicationFeatureCard";
+import PlanSection from "../components/PlanSection";
 
 export default function Page() {
   return (
@@ -71,7 +72,11 @@ export default function Page() {
             height={700}
             className="w-[43%] rg:block hidden"
           />
-          <Image src={ScribbleArrow} alt="Scribble Arrow" className="xl:block hidden w-[6vw] absolute right-[23%] bottom-[7vw]"/>
+          <Image
+            src={ScribbleArrow}
+            alt="Scribble Arrow"
+            className="xl:block hidden w-[6vw] absolute right-[23%] bottom-[7vw]"
+          />
           <div className="flex flex-col justify-start gap-[20%]">
             <MultiApplicationFeatureCard
               className="w-[100%]"
@@ -160,20 +165,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-background-color flex flex-col gap-14 items-start xl:px-[12%] lg:px-[7%] px-[5%] rg:py-14 py-6">
-        <div className="flex flex-col rg:w-[60%] w-[100%] gap-3">
-          <p className="text-brand-color font-regular rg:text-xs sm:text-xxs text-xxxs">
-            Product Insight
-          </p>
-          <h3 className="text-text-dark font-semibold rg:text-[32px] md:text-rg sm:text-md text-sm leading-[130%]">
-            Flexible Pricing for Every Educational Need
-          </h3>
-          <p className="text-text-light rg:text-sm md:text-xs sm:text-xxs text-xxxs">
-            Choose a plan that aligns with your institution's size and
-            requirements.
-          </p>
-        </div>
-      </div>
+      <PlanSection />
     </NonErrorLayout>
   );
 }
