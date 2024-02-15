@@ -107,7 +107,7 @@ export default function ContactFormSection() {
           label="Phone Number (Optional)"
           placeholder="Enter phone number"
           className=""
-          type="tel"
+          type="number"
           name="phone_number"
           onChange={() => {}}
         />
