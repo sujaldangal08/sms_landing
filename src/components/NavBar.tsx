@@ -9,6 +9,7 @@ import MobileNavBar from "./shared/MobileNavBar";
 import Link from "next/link";
 import NavAIIcon from "../../public/icons/NavAIIcon";
 
+
 export default function NavBar() {
   const [selectedNavItem, setNavItem] = useState<number | null>(null);
   const [openNav, setOpenNav] = useState<boolean>(false);
