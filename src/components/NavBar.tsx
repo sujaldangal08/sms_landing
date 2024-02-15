@@ -87,7 +87,7 @@ export default function NavBar() {
         className="flex-row w-full xl:px-[12%] lg:px-[7%] px-[5%] py-8 justify-between items-center fixed top-0 z-[10] rg:flex hidden"
         style={{ backdropFilter: "blur(5px)" }}
         id="desktop_navbar"
-        onMouseEnter={() => setOpenNav(true)}
+        onMouseEnter={()=> setOpenNav(true)}
         onMouseLeave={() => setOpenNav(false)}
       >
         <Link href={"/"}>
