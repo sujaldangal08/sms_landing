@@ -29,22 +29,19 @@ export default function Page() {
       </div>
       <div className="flex justify-center mt-44 ">
         <div>
-          <h2 className=  " flex justify-center text-text-dark md:text-lg text-48 font-semibold">
+          <h2 className=" flex justify-center text-text-dark md:text-lg text-48 font-semibold">
             Unlocking the Future of Education:{""}
             <span className="text-brand-color">Shikshya</span>
             <br className="md:hidden" />
             Launching Soon!
           </h2>
 
-          <p className= " flex justify-center md:text-xs sm:text-xxs text-xxxs text-text-light lg:w-[60%] rg:w-[70%] sm:w-[80%] w-[90%] text-center">
+          <p className=" flex justify-center md:text-xs sm:text-xxs text-xxxs text-text-light lg:w-[60%] rg:w-[70%] sm:w-[80%] w-[90%] text-center">
             We are thrilled to introduce Shikshya, a comprehensive school
             management system designed to streamline administrative tasks,
             enhance communication, and elevate the learning experience.
           </p>
         </div>
-
-
-
       </div>
       {/*
       <Input
@@ -61,7 +58,6 @@ export default function Page() {
           className="lg:text-xxs text-xxxs lg:px-6 px-4 lg:py-2 py-1"
         />
   */}
-
     </>
   );
 }

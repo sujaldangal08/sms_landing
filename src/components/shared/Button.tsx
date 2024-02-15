@@ -7,7 +7,7 @@ export default function Button({
   title: string;
   className?: string | null;
   onClick?: VoidFunction;
-  vairant?: string | "outline";
+  vairant?: string | "outline" | "icon";
 }) {
   if (vairant == "outline") {
     return (
