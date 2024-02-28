@@ -3,14 +3,14 @@ export default function TextArea({
   placeholder,
   className,
   name,
-  onChange,
+  register,
   isRequired,
 }: {
   label: string;
   placeholder: string;
   className?: string;
   name: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  register: any;
   isRequired?: boolean;
 }) {
   return (
@@ -23,7 +23,7 @@ export default function TextArea({
         {label}
       </label>
       <textarea
-        onChange={onChange}
+        {...register}
         name={name}
         className="w-full h-[100px] resize-none text-gray-600 md:text-xs sm:text-xxs text-xxxs outline outline-1 outline-neutral-200 rounded-md bg-white sm:px-5 px-4 sm:py-3 py-2
               placeholder:text-gray-400 md:placeholder:text-xs sm:placeholder:text-xxs placeholder:text-xxxs"

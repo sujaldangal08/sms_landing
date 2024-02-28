@@ -7,6 +7,7 @@ import LinkedInIcon from "../../public/icons/LinkedInIcon.svg";
 import ShikshyaLanding from "../../public/shikshya_landing.svg";
 import Button from "@/components/shared/Button";
 import Link from "next/link";
+import SubscribeForm from "@/components/shared/SubscribeForm";
 
 export default function Page() {
   return (
@@ -24,17 +25,7 @@ export default function Page() {
             management system designed to streamline administrative tasks,
             enhance communication, and elevate the learning experience.
           </p>
-          <div className="flex z-[1] lg:w-[65%] rg:w-[70%] md:w-[75%] sm:w-[90%] w-[95%]">
-            <input
-              placeholder="Drop your Email to stay updated!"
-              className={`w-full text-gray-600 md:text-xs sm:text-xxs text-xxxs outline outline-1 outline-neutral-200 rounded-md bg-white sm:px-5 px-4 sm:py-3 py-2
-              placeholder:text-gray-400 md:placeholder:text-xs sm:placeholder:text-xxs placeholder:text-xxxs appearance-none`}
-            />
-            <Button
-              title="Get Notified"
-              className="min-w-[20%] lg:text-xxs text-xxxs lg:px-6 px-4 lg:py-2 py-1"
-            />
-          </div>
+          <SubscribeForm />
         </div>
         <div className="flex flex-row pt-14 w-full justify-between md:items-end items-center">
           <p className="text-text-medium text-xxs pb-8">© 2023 Shikshya.</p>
@@ -49,10 +40,16 @@ export default function Page() {
             <Link href={"https://www.facebook.com/shikshyaapp"} target="_blank">
               <Image src={FacebookIcon} alt="Facebook Icon" />
             </Link>
-            <Link href={"https://www.linkedin.com/company/shikshya-app/"} target="_blank">
+            <Link
+              href={"https://www.linkedin.com/company/shikshya-app/"}
+              target="_blank"
+            >
               <Image src={LinkedInIcon} alt="LinkedIn Icon" />
             </Link>
-            <Link href={"https://www.instagram.com/shikshya.app/"} target="_blank">
+            <Link
+              href={"https://www.instagram.com/shikshya.app/"}
+              target="_blank"
+            >
               <Image src={InstagramIcon} alt="Instagram Icon" />
             </Link>
           </div>

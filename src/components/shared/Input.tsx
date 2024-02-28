@@ -8,16 +8,16 @@ export default function Input({
   className,
   type,
   name,
-  onChange,
   isRequired,
+  register,
 }: {
   label: string;
   placeholder: string;
   className?: string;
   type: HTMLInputTypeAttribute;
   name: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isRequired?: boolean;
+  register: any;
 }) {
   return (
     <div className={`flex flex-col sm:gap-2 gap-[6px] ` + className}>
@@ -29,7 +29,7 @@ export default function Input({
         {label}
       </label>
       <input
-        onChange={onChange}
+        {...register}
         name={name}
         type={type}
         placeholder={placeholder}

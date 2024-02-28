@@ -26,6 +26,7 @@ export default function Button({
           className
         }`}
         onClick={onClick}
+        type={"submit"}
       >
         {title}
       </button>
