@@ -57,15 +57,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0EA42185B6804B6685B1E4EAE6A21E0C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1DA94BF78CF5441D9744089594AB2C1E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F898EA2421F04B2D9AC9EED66CD509DB }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_ }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Shikshya-Landing-Page'
+          app-name: 'sms-web-app'
           slot-name: 'Production'
           package: .
-          
