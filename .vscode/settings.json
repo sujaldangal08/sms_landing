@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/389b021b-d065-4519-ac11-526f419e357f/resourceGroups/azure-intern/providers/Microsoft.Web/sites/sms-web-app",
+    "appService.deploySubpath": "."
 }
